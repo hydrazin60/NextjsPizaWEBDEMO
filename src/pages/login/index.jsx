@@ -90,14 +90,11 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(credentials);
-    
   };
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
-  
   };
-
   return (
     <div
       style={{
@@ -122,7 +119,7 @@ function Login() {
             </label>
             <input
               onChange={handleChange}
-              type="text"
+              type="email"
               name="email"
               value={credentials.email}
               placeholder="Enter your email/username"
@@ -147,18 +144,18 @@ function Login() {
               className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700 dark:text-gray-100 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
-          <div className="flex items-center justify-between"> 
-          <button
-            type="submit"
-            className="border text-gray-900 dark:text-gray-100 font-bold dark:border-gray-400 border-gray-900 rounded mr-2 p-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700 hover:text-gray-100"
-          >
-            Login
-          </button>
-          <Link href={"/signup"} style={{ all: "unset" }}>
-            <button className="border text-gray-900 dark:text-gray-100 font-bold dark:border-gray-400 border-gray-900 rounded mr-2 p-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700  hover:text-gray-100">
-              New User?
+          <div className="flex items-center justify-between">
+            <button
+              type="submit"
+              className="border text-gray-900 dark:text-gray-100 font-bold dark:border-gray-400 border-gray-900 rounded mr-2 p-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700 hover:text-gray-100"
+            >
+              Login
             </button>
-          </Link>
+            <Link href={"/signup"} style={{ all: "unset" }}>
+              <button className="border text-gray-900 dark:text-gray-100 font-bold dark:border-gray-400 border-gray-900 rounded mr-2 p-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700  hover:text-gray-100">
+                New User?
+              </button>
+            </Link>
           </div>
         </form>
       </div>
